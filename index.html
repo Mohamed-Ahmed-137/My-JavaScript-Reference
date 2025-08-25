@@ -4,48 +4,66 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-
+  <title>JavaScript Practice Sections</title>
 </head>
 
-<body
-  style="min-height: 100vh;width: 100%;display: flex; align-items: center;justify-content: center;margin: 0;padding: 0;background-color:white; color: black;">
-  <!-- section1 -->
-  <!-- <h2>Hello Mohamed</h2>
-    <h4 id="ass_1"></h4>
-    <p id="sol_ass_1"></p> -->
+<body style="min-height: 100vh;width: 100%;margin: 0;padding: 0;background-color:white; color: black;">
 
-  <!-- section2 -->
-  <!-- <input type="text" id="input" />
-    <button id="btn">Click</button>
-    <h3 id="result"></h3> -->
+  <!-- ============================== -->
+  <!-- 📚 Section 1: Basic Greetings -->
+  <!-- ============================== -->
+  <!-- 
+  <h2>Hello Mohamed</h2>
+  <h4 id="ass_1"></h4>
+  <p id="sol_ass_1"></p> 
+  -->
 
-  <!-- section3 Array -->
-  <!--  <div>
+  <!-- ============================== -->
+  <!-- 🔤 Section 2: Input & Button -->
+  <!-- ============================== -->
+  <!-- 
+  <input type="text" id="input" />
+  <button id="btn">Click</button>
+  <h3 id="result"></h3> 
+  -->
+
+  <!-- ============================== -->
+  <!-- 📋 Section 3: Array Management -->
+  <!-- ============================== -->
+  <!--  
+  <div>
     <input type="text" id="name-input">
     <button id="submitBtn">Submit</button>
     <button id="deleteBtn">Delete</button>
   </div>
   <h2 id="students"></h2>
- -->
-
-  <!-- <div id="mul-table"></div> -->
-
-
-  <!-- 🎓 Section 4 – Vowel Filter UI -->
-  <!-- <h2>Vowel Letters: ( A, E, I, O, U )</h2>
-<div>
-  <input type="text" id="input" placeholder="Enter a word" />
-  <button id="submitBtn">Submit</button>
-</div>
-<div id="result"></div>
-
-  <h3 id="result"></h3> -->
+  -->
 
   <!-- ============================== -->
-  <!-- 🔎 Section 5 – Search for Student -->
+  <!-- 🔢  Multiplication Table -->
   <!-- ============================== -->
-  <!-- <h1>Find Student</h1>
+  <!-- 
+  <div id="mul-table"></div> 
+  -->
+
+  <!-- ============================== -->
+  <!-- 🎓 Section 4: Vowel Filter UI -->
+  <!-- ============================== -->
+  <!-- 
+  <h2>Vowel Letters: ( A, E, I, O, U )</h2>
+  <div>
+    <input type="text" id="input" placeholder="Enter a word" />
+    <button id="submitBtn">Submit</button>
+  </div>
+  <div id="result"></div>
+  <h3 id="result"></h3> 
+  -->
+
+  <!-- ============================== -->
+  <!-- 🔎 Section 5: Search for Student -->
+  <!-- ============================== -->
+  <!-- 
+  <h1>Find Student</h1>
 
   <div>
     <input type="text" id="input" placeholder="Enter student name" />
@@ -55,19 +73,21 @@
   <p style="font-size: 20px;" id="students"></p>
   <p style="font-size: 40px;" id="result"></p>
 
-  <div id="array2d"></div> -->
+  <div id="array2d"></div> 
+  -->
 
   <!-- ============================== -->
-  <!-- 📘 Assignment - Nested Loops (Section 6) -->
+  <!-- 📘 Section 6: Nested Loops Assignment -->
   <!-- ============================== -->
-  <!-- <div id="table"></div> -->
-
+  <!-- 
+  <div id="table"></div> 
+  -->
 
   <!-- ============================== -->
-  <!-- 📘 Assingment on objects (Section 7) -->
+  <!-- 📘 Section 7: Objects Assignment - Student Table -->
   <!-- ============================== -->
-
-  <!--   <div>
+  <!-- 
+  <div>
     <table class="studentTable">
       <tr>
         <th>Name</th>
@@ -82,24 +102,124 @@
       <input type="number" placeholder="ID" class="id">
       <button class="btn">Add Student</button>
     </div>
-    
   </div>
+
   <style>
-    table,
-    th,
-    td {
+    table, th, td {
       border: 1px solid white;
     }
 
-    th,
-    td {
+    th, td {
       padding: .5rem
     }
-  </style> -->
+  </style> 
+  -->
 
+  <!-- ============================== -->
+  <!-- 🖱️  OnClick Events -->
+  <!-- ============================== -->
+  <!-- 
+  <h2 onclick="alert('Hello Mohamed')">Hello World</h2>
+  <p onclick="this.innerHTML = 'Web Developer'">
+    I'm a computer science student at the Faculty of Computers and Artificial Intelligence, Fayoum University.
+  </p> 
+  -->
+
+  <!-- ============================== -->
+  <!-- 📝 Section 8: DOM Manipulation Example -->
+  <!-- ============================== -->
+  <!-- 
+  <div style="color: white; width: 100%; font-size: 3rem; height: 50vh; background-color: blue;">
+    <ul id="ul">
+      <li>Mohamed</li>
+      <li>Ahmed</li>
+      <li>Ali</li>
+    </ul>
+  </div> 
+  -->
+
+  <!-- ============================== -->
+  <!--        🎯 FINAL ASSIGNMENT     -->
+  <!-- ============================== -->
+
+  <!-- ============================== -->
+  <!-- 📝 First Section: Input Area -->
+  <!-- ============================== -->
+  <!-- 
+  <div id="first-section">
+    <div id="input-section">
+      <input type="text" placeholder="Enter a word" id="input" onchange="nameChanged(this)">
+      <button id="send-btn">Send</button>
+    </div>
+    <div id="input-result"></div>
+  </div> 
+  -->
+
+  <!-- ============================== -->
+  <!-- 💬 Second Section: Message Display -->
+  <!-- ============================== -->
+  <!-- 
+  <div id="second-section">
+    <h1 id="message">Please Enter A Word</h1>
+  </div> 
+  -->
+
+  <!-- ============================== -->
+  <!--           🎨 CSS STYLES        -->
+  <!-- ============================== -->
+  <!-- 
+  <style>
+    /* ======= First Section Styles ======= */
+    #first-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50vh;
+      background-color: rgb(17, 17, 114);
+      flex-direction: column;
+      gap: 5rem;
+    }
+
+    /* Input & Button Styling */
+    #input {
+      height: 1.7rem;
+      border-radius: 0.2rem;
+      padding: 0 0.5rem;
+    }
+
+    #send-btn {
+      height: 2.09rem;
+      border-radius: 0.2rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    #send-btn:hover {
+      background-color: aquamarine;
+    }
+
+    /* Input Result Display */
+    #input-result {
+      font-size: 3rem;
+      color: white;
+    }
+
+    /* ======= Second Section Styles ======= */
+    #second-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50vh;
+      flex-direction: column;
+    }
+  </style>
+  -->
+
+  <!-- ============================== -->
+  <!--        📜 JavaScript File      -->
+  <!-- ============================== -->
   <script src="app.js"></script>
-</body>
 
-</html>
+</body>
 
 </html>

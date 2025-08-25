@@ -1316,15 +1316,15 @@ console.log(student.name); // Output: Ahmed (الكائن الأصلي بقي ب
 🎯 DOM Capabilities:
 ━━━━━━━━━━━━━━━━━━━
 ✅ JavaScript can change all HTML elements in the page
-✅ JavaScript can change all HTML attributes in the page  
+✅ JavaScript can change all HTML attributes in the page
 ✅ JavaScript can change all CSS styles in the page
 ✅ JavaScript can remove existing HTML elements and attributes
 ✅ JavaScript can add new HTML elements and attributes
 ✅ JavaScript can react to all existing HTML events in the page
 ✅ JavaScript can create new HTML events in the page
 
-📚 Common DOM Methods:
-━━━━━━━━━━━━━━━━━━━━━━━
+📚 Common DOM Methods/Properties:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 • document.getElementById(id)           - العثور على عنصر بواسطة id
 • document.getElementsByTagName(name)   - العثور على عناصر بواسطة tag name
 • document.getElementsByClassName(name) - العثور على عناصر بواسطة class name
@@ -1332,9 +1332,99 @@ console.log(student.name); // Output: Ahmed (الكائن الأصلي بقي ب
 • document.createElement(element)       - إنشاء عنصر HTML
 • element.innerHTML = content          - تغيير المحتوى الداخلي لعنصر
 • element.style.property = value       - تغيير style لعنصر
+• element.setAttribute(attr, value)    - تعيين attribute لعنصر
+• element.getAttribute(attr)           - الحصول على قيمة attribute
+• element.remove()                     - إزالة عنصر من DOM
+• element.removeChild(child)        - إزالة عنصر فرعي
+• element.appendChild(child)            - إضافة عنصر فرعي
 • element.addEventListener(event, function) - إضافة event listener
 */
 
+// ═══════════════════════════════════════════════════════════════════════════════
+//                   📝 Example on DOM Manipulation – Section 8
+// ═══════════════════════════════════════════════════════════════════════════════
+// If I want to add a new <li> inside <ul>
+
+/* // =====================
+// 1) Using innerHTML
+// =====================
+let ul = document.getElementById("ul");
+ul.innerHTML += "<li>Hussein</li>";
+
+// =====================
+// 2) Using DOM Nodes
+// =====================
+let li = document.createElement("li");
+
+// Method 1: Direct innerHTML
+// li.innerHTML = "Mohamed";
+
+// Method 2: Using text node (Recommended)
+let text = document.createTextNode("Mohamed");
+li.appendChild(text);    // add text into li
+ul.appendChild(li);      // add li into ul
+
+// (optional) Removing the text from li
+// li.removeChild(text);
+ */
+
+// ══════════════════════════════════════════════════════════════════════════
+//                           📝 Final Assignment
+// ══════════════════════════════════════════════════════════════════════════
+/* 
+// Get elements
+let inputRes = document.getElementById("input-result");
+let message = document.getElementById("message");
+let sendBtn = document.getElementById("send-btn");
+let secondRes = document.getElementById("second-section");
+
+// ──────────────────────────────────────────────
+// Update input result in real-time
+// ──────────────────────────────────────────────
+function nameChanged(input) {
+  let inputVal = input.value;
+  inputRes.innerHTML = inputVal;
+}
+
+// ──────────────────────────────────────────────
+// Handle Send Button Click
+// ──────────────────────────────────────────────
+sendBtn.addEventListener("click", () => {
+  let inputVal = document.getElementById("input").value;
+
+  if (inputVal !== "") {
+    // Hide initial message
+    message.style.display = "none";
+
+    // Create new element
+    let resultNode = document.createElement("h1");
+    resultNode.style.margin = 0;
+    resultNode.textContent = inputVal;
+
+    // Add hover effects
+    resultNode.addEventListener("mouseenter", function () {
+      this.style.backgroundColor = "green";
+    });
+    resultNode.addEventListener("mouseout", function () {
+      this.style.backgroundColor = "white";
+    });
+
+    // Append to second section
+    secondRes.appendChild(resultNode);
+  }
+});
+
+// ──────────────────────────────────────────────
+// Hover effect for default message
+// ──────────────────────────────────────────────
+message.addEventListener("mouseenter", function () {
+  this.style.backgroundColor = "red";
+});
+message.addEventListener("mouseout", function () {
+  this.style.backgroundColor = "white";
+});
+
+ */
 /*
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                                END OF FILE                                   ║
@@ -1349,3 +1439,4 @@ console.log(student.name); // Output: Ahmed (الكائن الأصلي بقي ب
 ║  • DOM manipulation basics                                                   ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
 */
+
